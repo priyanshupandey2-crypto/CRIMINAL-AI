@@ -2,7 +2,7 @@
 
 A production-ready, professional-grade frontend for an AI-powered legal research platform. Built with **React 19**, **Vite**, and **Tailwind CSS**, this platform provides a high-fidelity interface for complex legal analysis and multi-agent execution tracing.
 
----
+
 
 ## 🌟 Key Features
 
