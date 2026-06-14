@@ -1,0 +1,11 @@
+# Root .gitignore
+node_modules/
+dist/
+.vite/
+.DS_Store
+*.log
+
+# Workspace specific
+**/node_modules/
+**/dist/
+**/.vite/
