@@ -1,5 +1,5 @@
 from agents.research_agent import research
 
 print(
-    research("latest criminal law updates India")
+    research("My friend is having divorce, so what shoudl he do now?")
 )
