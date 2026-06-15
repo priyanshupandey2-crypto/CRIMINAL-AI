@@ -11,3 +11,4 @@ tavily-python
 python-dotenv
 pypdf
 sentence-transformers
+langchain-huggingface
