@@ -15,4 +15,6 @@ class AgentState(TypedDict):
 
     review: str
 
+    review_score: float
+
     retries: int

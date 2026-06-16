@@ -1,5 +1,5 @@
 import React from 'react';
-import { Plus, MessageSquare, Book } from 'lucide-react';
+import { Plus, MessageSquare, Users } from 'lucide-react';
 import { useChat } from '../../context/ChatContext';
 import { NavLink, useNavigate } from 'react-router-dom';
 
@@ -14,7 +14,7 @@ const Sidebar = () => {
 
     const menuItems = [
         { icon: MessageSquare, label: 'Chat', path: '/' },
-        { icon: Book, label: 'BNS Explorer', path: '/explorer' },
+        { icon: Users, label: 'Group Info', path: '/explorer' },
     ];
 
     return (
