@@ -1,24 +1,31 @@
 from workflows.graph import app_graph
 
+config = {
+    "configurable": {
+        "thread_id": "test_case_1"
+    }
+}
+
 result = app_graph.invoke(
     {
-        "query": "What is punishment for theft?",
-        "rag_context": "",
-        "research_context": "",
-        "answer": "",
-        "review": "",
+        "query": "Where is jaipur?",
+        "chat_history": [],
         "retries": 0
-    }
+    },
+    config=config
 )
 
-print("\n" + "=" * 50)
+print("\n========================")
 print("FINAL ANSWER")
-print("=" * 50)
-
+print("========================")
 print(result["answer"])
 
-print("\n" + "=" * 50)
+print("\n========================")
 print("REVIEW")
-print("=" * 50)
-
+print("========================")
 print(result["review"])
+
+print("\n========================")
+print("SCORE")
+print("========================")
+print(result["review_score"])

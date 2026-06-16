@@ -5,8 +5,13 @@ def synthesize(
     query: str,
     rag_context: str,
     research_context: str = "",
-    chat_history: str = ""
+    chat_history: str = "",
+    attempt: int = 1
 ):
+
+    retry_instruction = ""
+    if attempt > 1:
+        retry_instruction = f"\n[RETRY ATTEMPT {attempt}] Your previous answer was rejected. Re-analyze the question and provide a substantively different perspective or more detailed explanation."
 
     prompt = f"""
 You are a Criminal Law AI Assistant.
@@ -41,7 +46,7 @@ Instructions:
 8. Do NOT ask for details again if they already exist in chat history.
 9. Memory has higher priority than research results.
 10. Use RAG context to verify or enrich the answer.
-11. Do not hallucinate.
+11. Do not hallucinate.{retry_instruction}
 Format:
 
 Summary:
