@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Hash, Sparkles } from 'lucide-react';
+import { Send, Sparkles } from 'lucide-react';
 
 const ChatInput = ({ onSend, disabled }) => {
     const [input, setInput] = useState('');
@@ -30,10 +30,6 @@ const ChatInput = ({ onSend, disabled }) => {
     return (
         <div className="p-4 bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 transition-colors duration-300">
             <form onSubmit={handleSubmit} className="max-w-4xl mx-auto relative group">
-                <div className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-primary-500 transition-colors">
-                    <Hash size={20} />
-                </div>
-
                 <textarea
                     ref={textareaRef}
                     rows="1"
@@ -42,7 +38,7 @@ const ChatInput = ({ onSend, disabled }) => {
                     onKeyDown={handleKeyDown}
                     disabled={disabled}
                     placeholder="Ask any legal question... (e.g. 'What is the punishment for cheating in BNS?')"
-                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl py-4 pl-12 pr-24 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all resize-none max-h-48 scrollbar-hide shadow-inner"
+                    className="w-full bg-slate-50 dark:bg-slate-800 border border-slate-200 dark:border-slate-700 rounded-2xl py-4 px-6 pr-24 text-sm text-slate-900 dark:text-white placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500/20 focus:border-primary-500 transition-all resize-none max-h-48 scrollbar-hide shadow-inner"
                 />
 
                 <div className="absolute right-2.5 bottom-2.5 flex items-center gap-2">
