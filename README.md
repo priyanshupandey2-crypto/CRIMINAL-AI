@@ -113,7 +113,7 @@ RAG Agent          Research Agent
 
 ### Vector Database
 
-* Qdrant (Local Storage)
+* Qdrant (Cloud)
 
 ### Document Processing
 
