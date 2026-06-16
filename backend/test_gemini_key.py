@@ -5,7 +5,6 @@ import google.generativeai as genai
 load_dotenv()
 
 api_key = os.getenv("GOOGLE_API_KEY")
-print(f"Testing API Key (first 4 chars): {api_key[:4] if api_key else 'None'}")
 
 try:
     genai.configure(api_key=api_key)
